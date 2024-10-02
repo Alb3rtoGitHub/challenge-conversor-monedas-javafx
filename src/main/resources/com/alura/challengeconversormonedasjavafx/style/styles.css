@@ -1,0 +1,6 @@
+.anchorPane {
+    /*-fx-background-color: lightblue;*/
+    -fx-background-color: linear-gradient(from 0% 50% to 50% 100%, #add8e6, #0097c0);
+    -fx-background-image: url("../assets/bg-pattern.png");
+    -fx-background-repeat: repeat;
+}
