@@ -36,8 +36,8 @@ La aplicación presenta una interfaz clara y profesional:
 - Un botón de "**Convertir**" que ejecuta la operación de cambio, mostrando el resultado en pantalla.
 - Un área de **historial de conversiones** en la parte inferior, que registra cada operación de manera automática.
 
-<img src="./src/main/resources/com/alura/challengeconversormonedasjavafx/assets/Conversor.png" align="center" height="565" width="565" />
-<img src="./src/main/resources/com/alura/challengeconversormonedasjavafx/assets/Conversor1.png" align="center" height="565" width="565" />
+<img src="./src/main/resources/com/alura/challengeconversormonedasjavafx/assets/ConversorMonedas.png" align="center" height="565" width="565" />
+<img src="./src/main/resources/com/alura/challengeconversormonedasjavafx/assets/ListaMonedas.png" align="center" height="565" width="565" />
 
 ## 🚀 Cómo Ejecutar la Aplicación
 
