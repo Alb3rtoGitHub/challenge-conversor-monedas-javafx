@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="560" prefWidth="500" styleClass="anchorPane" stylesheets="@style/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alura.challengeconversormonedasjavafx.controlador.ConversorDeMonedaControlador">
+<AnchorPane prefHeight="565.0" prefWidth="565.0" styleClass="anchorPane" stylesheets="@style/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alura.challengeconversormonedasjavafx.controlador.ConversorDeMonedaControlador">
     <children>
-        <Label layoutX="137.0" layoutY="31.0" text="Conversor de Monedas" textFill="#2213f2">
+        <Label layoutX="137.0" layoutY="31.0" text="Conversor de Monedas" textFill="#140d90">
             <font>
                 <Font name="Arial Black" size="24.0" />
             </font>
@@ -28,7 +28,7 @@
                 </FXCollections>
             </items>
         </ComboBox>
-        <ImageView fx:id="imgMonedaBase" layoutX="370.0" layoutY="186.0" fitHeight="20.0" fitWidth="30.0" />
+        <ImageView fx:id="imgMonedaBase" fitHeight="20.0" fitWidth="30.0" layoutX="370.0" layoutY="186.0" />
         <Label layoutX="205.0" layoutY="233.0" text="Seleccione la moneda destino:" />
         <ComboBox fx:id="cmbMonedaDestino" layoutX="210.0" layoutY="261.0" prefWidth="150.0">
             <items>
@@ -41,16 +41,22 @@
                 </FXCollections>
             </items>
         </ComboBox>
-        <ImageView fx:id="imgMonedaDestino" layoutX="370.0" layoutY="261.0" fitHeight="20.0" fitWidth="30.0" />
+        <ImageView fx:id="imgMonedaDestino" fitHeight="20.0" fitWidth="30.0" layoutX="370.0" layoutY="261.0" />
         <Button layoutX="253.0" layoutY="306.0" mnemonicParsing="false" onAction="#convertir" text="Convertir" />
-        <Label fx:id="lblResultado" layoutX="68.0" layoutY="353.0" prefHeight="27.0" prefWidth="511.0">
+        <Label fx:id="lblResultado" alignment="CENTER" layoutX="22.0" layoutY="357.0" prefHeight="27.0" prefWidth="522.0" textFill="#0d8c20">
             <font>
                 <Font name="Arial Black" size="18.0" />
             </font></Label>
         <ImageView fitHeight="100.0" fitWidth="111.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@assets/ConversorMoneda.png" />
+                <Image url="@assets/Conversor.png" />
             </image>
         </ImageView>
+      <Label layoutX="149.0" layoutY="398.0" text="Historial de Conversiones">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="lstHistorial" layoutX="85.0" layoutY="425.0" prefHeight="120.0" prefWidth="400.0" />
     </children>
 </AnchorPane>

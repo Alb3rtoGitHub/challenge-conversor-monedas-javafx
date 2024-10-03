@@ -10,6 +10,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Callback;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class ConversorDeMonedaControlador {
     @FXML
     private TextField txtValor;
@@ -23,6 +26,10 @@ public class ConversorDeMonedaControlador {
     private ImageView imgMonedaBase;
     @FXML
     private ImageView imgMonedaDestino;
+    @FXML
+    private ListView<String> lstHistorial;
+
+    private ObservableList<String> historial = FXCollections.observableArrayList();
 
     private APIServicio apiServicio;
 
@@ -41,7 +48,17 @@ public class ConversorDeMonedaControlador {
                 new Moneda("ARS", "ars.png"),
                 new Moneda("BRL", "brl.png"),
                 new Moneda("EUR", "eur.png"),
-                new Moneda("GBP", "gbp.png")
+                new Moneda("GBP", "gbp.png"),
+                new Moneda("JPY", "jpy.png"),
+                new Moneda("CLP", "clp.png"),
+                new Moneda("CAD", "cad.png"),
+                new Moneda("AUD", "aud.png"),
+                new Moneda("CHF", "chf.png"),
+                new Moneda("CNY", "cny.png"),
+                new Moneda("MXN", "mxn.png"),
+                new Moneda("INR", "inr.png"),
+                new Moneda("RUB", "rub.png"),
+                new Moneda("ZAR", "zar.png")
         );
 
         cmbMonedaBase.setItems(monedas);
@@ -54,6 +71,8 @@ public class ConversorDeMonedaControlador {
 
         cmbMonedaBase.setOnAction(event -> updateImageView(cmbMonedaBase, imgMonedaBase));
         cmbMonedaDestino.setOnAction(event -> updateImageView(cmbMonedaDestino, imgMonedaDestino));
+
+        lstHistorial.setItems(historial);
     }
 
     private Callback<ListView<Moneda>, ListCell<Moneda>> createCellFactory() {
@@ -90,7 +109,14 @@ public class ConversorDeMonedaControlador {
 
     public void convertir() {
         try {
+            // Reemplazar las , por . para evitar error en los decimales
             double valor = Double.parseDouble(txtValor.getText().replace(",", "."));
+
+            // Control de valores mayor a 0
+            if (valor <= 0 ){
+                lblResultado.setText("Por favor, ingrese un valor mayor que 0.");
+                return; // sale del metodo
+            }
             Moneda monedaBase = cmbMonedaBase.getValue();
             Moneda monedaDestino = cmbMonedaDestino.getValue();
 
@@ -98,6 +124,15 @@ public class ConversorDeMonedaControlador {
                 // Llama al servicio para obtener la tasa de cambio
                 double tasaCambio = apiServicio.consultarTasaDeCambio(monedaBase.nombre(), monedaDestino.nombre());
                 double resultado = valor * tasaCambio;
+
+                // Marca de Tiempo
+                LocalDateTime fecha = LocalDateTime.now();
+                DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+                String marcaDeTiempo = fecha.format(formatoFecha);
+
+                // Lista de Historial de Conversiones
+                String conversionParaHistorial = String.format("[%s] %.2f %s convertidos son %.2f %s", marcaDeTiempo, valor, monedaBase.nombre(), resultado, monedaDestino.nombre());
+                historial.add(conversionParaHistorial);
 
                 lblResultado.setText(String.format("El valor convertido es: %.2f %s", resultado, monedaDestino.nombre()));
             } else {
