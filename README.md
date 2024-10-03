@@ -1,6 +1,7 @@
 # Conversor de Monedas - JavaFX Application 🌍💸
 
 Bienvenido al **Conversor de Monedas**. Esta aplicación gráfica, construida con **JavaFX** y utilizando la API de [ExchangeRate-API](https://www.exchangerate-api.com/), permite a los usuarios convertir entre diversas monedas internacionales de manera rápida y sencilla.
+<img src="./src/main/resources/com/alura/challengeconversormonedasjavafx/assets/ConversorMonedasJavaFX.png" align="center" height="565" width="565" />
 
 ## 🖥️ Características Principales
 
