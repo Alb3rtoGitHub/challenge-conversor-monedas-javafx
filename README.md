@@ -108,28 +108,24 @@ Se utiliza el patrón de diseño Modelo Vista Controlador (MVC)
 
 src/
 │
-├── main/
-│   ├── java/
-│   │   └── com/alura/challengeconversormonedasjavafx/
-│   │       ├── controlador/
-│   │       │   └── ConversorDeMonedaControlador.java
-│   │       ├── modelo/
-│   │       │   └── Moneda.java
-│   │       ├── servicio/
-│   │       │   └── APIServicio.java
-│   │       ├── EjecutarApp.java
-│   │       └── ConversorDeMonedaApp.java
-│   │
-│   ├── resources/
-│   │   ├── assets/
-│   │   │   └── ConversorMoneda.png
-│   │   └── vista.fxml
-│   └── styles/
-│       └── styles.css
-│
-└── test/
-    └── java/
-        └── com/alura/challengeconversormonedasjavafx/
+└── main/
+   ├── java/
+   │   └── com/alura/challengeconversormonedasjavafx/
+   │       ├── controlador/
+   │       │   └── ConversorDeMonedaControlador.java
+   │       ├── modelo/
+   │       │   └── Moneda.java
+   │       ├── servicio/
+   │       │   └── APIServicio.java
+   │       ├── EjecutarApp.java
+   │       └── ConversorDeMonedaApp.java
+   │
+   ├── resources/
+   │   ├── assets/
+   │   │   └── ConversorMoneda.png
+   │   └── vista.fxml
+   └── styles/
+       └── styles.css
 ```
 ## 🛠️ Tecnologías Utilizadas
 - JavaFX: Framework para la construcción de interfaces gráficas de usuario.
