@@ -36,8 +36,8 @@ La aplicación presenta una interfaz clara y profesional:
 - Un botón de "**Convertir**" que ejecuta la operación de cambio, mostrando el resultado en pantalla.
 - Un área de **historial de conversiones** en la parte inferior, que registra cada operación de manera automática.
 
-<img src="./com/alura/challengeconversormonedasjavafx/assets/Conversor.png" align="center" height="565" width="565" />
-<img src="./com/alura/challengeconversormonedasjavafx/assets/Conversor1.png" align="center" height="565" width="565" />
+<img src="./src/main/resources/com/alura/challengeconversormonedasjavafx/assets/Conversor.png" align="center" height="565" width="565" />
+<img src="./src/main/resources/com/alura/challengeconversormonedasjavafx/assets/Conversor1.png" align="center" height="565" width="565" />
 
 ## 🚀 Cómo Ejecutar la Aplicación
 
@@ -131,8 +131,8 @@ Siéntete libre de utilizarlo, modificarlo y distribuirlo como desees.
 Usa el código con precaución. 🚀
 ## 👨‍💻Autor: Alberto Vallecillo
 <a href="https://linkedin.com/in/alberto-vallecillo" target="_blank">
-<img src="./com/alura/challengeconversormonedasjavafx/assets/linkedin.svg" alt=linkedin style="margin-bottom: 5px;" />
+<img src="./src/main/resources/com/alura/challengeconversormonedasjavafx/assets/linkedin.svg" alt=linkedin style="margin-bottom: 5px;" />
 </a>
 <a href="https://github.com/Alb3rtoGitHub" target="_blank">
-<img src="./com/alura/challengeconversormonedasjavafx/assets/github.svg" alt=github style="margin-bottom: 5px;" />
+<img src="./src/main/resources/com/alura/challengeconversormonedasjavafx/assets/github.svg" alt=github style="margin-bottom: 5px;" />
 </a>
