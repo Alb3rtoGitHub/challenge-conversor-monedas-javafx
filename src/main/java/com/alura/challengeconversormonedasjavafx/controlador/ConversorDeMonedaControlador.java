@@ -131,7 +131,7 @@ public class ConversorDeMonedaControlador {
                 String marcaDeTiempo = fecha.format(formatoFecha);
 
                 // Lista de Historial de Conversiones
-                String conversionParaHistorial = String.format("[%s] %.2f %s convertidos son %.2f %s", marcaDeTiempo, valor, monedaBase.nombre(), resultado, monedaDestino.nombre());
+                String conversionParaHistorial = String.format("[%s] Tasa: %.2f - %.2f %s convertidos son %.2f %s", marcaDeTiempo, tasaCambio, valor, monedaBase.nombre(), resultado, monedaDestino.nombre());
                 historial.add(conversionParaHistorial);
 
                 lblResultado.setText(String.format("El valor convertido es: %.2f %s", resultado, monedaDestino.nombre()));
