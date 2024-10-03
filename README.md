@@ -1,11 +1,12 @@
 # Conversor de Monedas - JavaFX Application 🌍💸
 
 Bienvenido al **Conversor de Monedas**. Esta aplicación gráfica, construida con **JavaFX** y utilizando la API de [ExchangeRate-API](https://www.exchangerate-api.com/), permite a los usuarios convertir entre diversas monedas internacionales de manera rápida y sencilla.
+## 💡 Desafío Alura-ONE Java Challenge Conversor de Monedas 💡
+Esta app forma parte del desafío de Alura del Conversor de Monedas con la solicitud a una API de tasas de cambio, manipular datos JSON, filtrar y mostrar las monedas de interés, por iniciativa propia decidí desarrollar una alternativa con interfaz gráfica en JavaFX.
 
 <img src="./src/main/resources/com/alura/challengeconversormonedasjavafx/assets/ConversorMonedasJavaFX.png" align="center" height="565" width="565" />
 
 ## 🖥️ Características Principales
-
 - **Conversión en Tiempo Real**: Utiliza tasas de cambio actualizadas en tiempo real, proporcionadas por la API, para convertir entre múltiples monedas.
 - **Interfaz Intuitiva**: La interfaz gráfica es amigable y fácil de usar, permitiendo seleccionar las monedas de origen y destino con un par de clics.
 - **Historial de Conversiones**: Un historial integrado que muestra las conversiones realizadas, permitiendo a los usuarios ver sus transacciones pasadas con marcas de tiempo precisas.
@@ -71,7 +72,7 @@ La aplicación presenta una interfaz clara y profesional:
 O bien busca el archivo: **challenge-conversor-monedas-javafx.jar** en el directorio /out/artifactcs/challenge_conversor_monedas_javafx_jar/ luego bájalo a tu pc y ejecútalo con doble click.
 
 ¡Listo! La aplicación de conversión de monedas se abrirá en una ventana gráfica.
-
+## 📦 Instalación
 ### API
 Este proyecto usa la API de ExchangeRate-API.
 > [!CAUTION]
@@ -86,7 +87,21 @@ Este proyecto usa la API de ExchangeRate-API.
 - Java 17 o superior
 - Conexión a Internet para las consultas a la API
 - IDE o editor de texto como IntelliJ IDEA, Eclipse o VSCode.
-- 
+- Tener tu propia API_KEY de la API.
+
+### Pasos:
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/tuusuario/conversor-monedas-javafx.git
+   ```
+2. Importar el proyecto en tu IDE favorito.
+
+3. Agregar la clave API: Dentro de la clase Principal, reemplaza el valor de apiKey con tu clave personal obtenida de ExchangeRate-API. Es fácil obtenerla, solo necesitas tener una direccion de correo donde te la envían
+   ```java
+   String apiKey = "TU_CLAVE_API_AQUI";
+   ```
+4. Ejecutar la aplicación: Ejecuta la clase Principal desde tu IDE para iniciar el programa.
+
 ## 📦 Estructura del Proyecto
 Se utiliza el patrón de diseño Modelo Vista Controlador (MVC)
 ```bash
